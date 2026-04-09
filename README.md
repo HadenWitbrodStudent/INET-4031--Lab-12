@@ -1,46 +1,39 @@
-# Docker Lab: Containerizing a Three-Tier Application
-**INET 4031 - Introductions to Systems**
+INET-4031 Lab 12 – Docker App
+# Overview
 
-This lab introduces Docker and Docker Compose by having you containerize a
-real, multi-service application. You will package three components: Apache,
-Flask, and MariaDB. These will be packaged into separate containers and wired together so they function as a complete application.
+This project runs a multi-container app using Docker Compose:
 
-The application code and scaffolding are provided. Your job is to complete the Dockerfiles, verify the stack runs correctly, and document your work below.
+Apache (web) – handles requests
+Flask (app) – backend API
+MariaDB (db) – database
 
-> **Directions and explanations for this lab are on the repository Wiki.**
-> Refer to the Wiki pages for step-by-step instructions.
+# Setup
 
----
+git clone https://github.com/HadenWitbrodStudent/INET-4031--Lab-12.git
+cd INET-4031--Lab-12
+cp .env.example .env
+docker compose up --build
 
-*The sections below are for you to fill out. Replace each placeholder with your own content before submitting. Having a detailed README is the best practice for showing your work in future GitHub repositories.*
+# Access
 
----
+Open:
 
-# Project Overview
+http://localhost
 
-<!-- Briefly describe what this application does in your own words.
-     What problem does it solve? What does a user interact with? -->
+# Features
 
-# Prerequisites
+REST API (/api/tickets)
+Persistent data (Docker volume)
+Internal networking via service names
+Health checks for services
 
-<!-- List what needs to be installed or configured on the VM before this lab
-     will work. Include Docker, Docker Compose, and anything else required. -->
+# Useful Commands
+docker compose ps
+docker compose logs <service>
+docker compose down
+docker compose down -v
 
-# Getting Started
+# Author
 
-<!-- Explain how a new teammate would bring this stack up from a fresh clone.
-     Walk through every command they need to run, in order. -->
-
-# Configuration
-
-<!-- Explain the .env file: what it is, what variables it contains,
-     and what a teammate needs to provide that is not in this repository. -->
-
-# Verification
-
-<!-- Describe how to confirm the stack is running correctly.
-     Reference the check script and what a passing run looks like. -->
-
-# Feedback (Optional)
-
-<!-- Do you have any feedback you would like to give us after completing this lab? What are some things you enjoyed? What about others that you felt was lackluster? Or maybe there was something that we missed that you'd love for us to touch on! This will help us improve the INET 4031 lab experience. We appreciate everything we can get!  -->
+Haden Witbrod
+INET-4031
