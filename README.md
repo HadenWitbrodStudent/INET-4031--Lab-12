@@ -9,10 +9,10 @@ MariaDB (db) – database
 
 # Setup
 
-git clone https://github.com/HadenWitbrodStudent/INET-4031--Lab-12.git
-cd INET-4031--Lab-12
-cp .env.example .env
-docker compose up --build
+1. git clone https://github.com/HadenWitbrodStudent/INET-4031--Lab-12.git
+2. cd INET-4031--Lab-12
+3. cp .env.example .env
+4. docker compose up --build
 
 # Access
 
